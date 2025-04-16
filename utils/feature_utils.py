@@ -175,13 +175,13 @@ def encoding_features(agent_feature, obj_feature_ls, lane_feature_ls):
         pre_traj_len = traj_nd.shape[0]
         polyline_id += 1
 
-    # incodeing lane feature
+    # encoding lane feature
     pre_lane_len = lane_nd.shape[0]
     for lane_feature in lane_feature_ls:
         l_lane_len = lane_feature[0].shape[0]
         l_lane_nd = np.hstack(
             (lane_feature[0], np.ones((l_lane_len, 1)) * polyline_id))
-        assert l_lane_nd.shape[1] == 7, "obj_traj feature dim 1 is not correct"
+        assert l_lane_nd.shape[1] == 7, "l_lane_traj feature dim 1 is not correct"
         lane_nd = np.vstack((lane_nd, l_lane_nd))
         lane_id2mask[polyline_id] = (pre_lane_len, lane_nd.shape[0])
         _tmp_len_1 = pre_lane_len - lane_nd.shape[0]
@@ -192,7 +192,7 @@ def encoding_features(agent_feature, obj_feature_ls, lane_feature_ls):
         r_lane_nd = np.hstack(
             (lane_feature[1], np.ones((r_lane_len, 1)) * polyline_id)
         )
-        assert r_lane_nd.shape[1] == 7, "obj_traj feature dim 1 is not correct"
+        assert r_lane_nd.shape[1] == 7, "r_lane_traj feature dim 1 is not correct"
         lane_nd = np.vstack((lane_nd, r_lane_nd))
         lane_id2mask[polyline_id] = (pre_lane_len, lane_nd.shape[0])
         _tmp_len_2 = pre_lane_len - lane_nd.shape[0]

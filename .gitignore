@@ -1,11 +1,20 @@
-/tmp
-/input_data
+/data
+/interm_data
+__pycache__
+.ipynb_checkpoints
+.virtual_documents
+/images
+/utils/__init__.py
+/utils/mv.py
 .vscode
 *.pyc
 .DS_Store
-/processed
-/raw
-/data
-/interm_data
 /trained_params
 *.h5
+
+## Might remove the below later
+/modeling
+single_gpu_train.py
+test_and_generate_H5.py
+train.py
+/utils/viz_utils.py
