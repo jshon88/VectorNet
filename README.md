@@ -49,12 +49,14 @@ This repository implements **VectorNet**, a two-stasge Graph Neural Network for 
 1. Extract hand-crafted features -> .pkl
     ```bash
     python preprocess_data.py
+    ```
     - Reads raw CSV and builds per-scenario features (agent, lanes, objects)
     - Saves one .pkl per scenario for fast downstream loading
 
 2. Build GraphDataset -> shards of dataset.pt
     ```bash
     python dataset.py
+    ```
     - Loads each .pkl in manageable batches
     - Wraps scenario as torch_geometric.data.GraphData
     - collates into dataset_part_*.pt
