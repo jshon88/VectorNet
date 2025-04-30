@@ -60,9 +60,9 @@ This repository implements **VectorNet**, a two-stasge Graph Neural Network for 
     - collates into dataset_part_*.pt
 
 ## Training & Evaluation
-    ```bash
-    python dataset.py
-    ```
+```bash
+python dataset.py
+```
 
 ## Visualization
 - Graph_viz.ipynb
