@@ -12,10 +12,10 @@ __pycache__
 /trained_params
 *.h5
 preprocess_data_explanation.ipynb
+Dataset_explanation.ipynb
+/lib
 
 ## Might remove the below later
-/modeling
-single_gpu_train.py
+multi_gpu_train.py
 test_and_generate_H5.py
-train.py
 /utils/viz_utils.py

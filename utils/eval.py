@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-# @Time    : 2020-06-18 22:00
-# @Author  : Xiaoke Huang
-# @Email   : xiaokehuang@foxmail.com
 import torch
 from argoverse.evaluation.eval_forecasting import get_displacement_errors_and_miss_rate
 from pprint import pprint
